@@ -26,7 +26,7 @@ export default function Result({ data }) {
 					</section>
 				) : (
 					<section id="result-section" className="no-result">
-						<h3>{data.messages ? data.messages : "no result"}</h3>
+						<h3>{data.messages ? data.messages : "NO RESULT"}</h3>
 					</section>
 				))}
 		</>

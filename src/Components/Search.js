@@ -9,7 +9,7 @@ export default function Search({ setData, setPosition }) {
 		)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
+				// console.log(data);
 				setData(data);
 				data.location && setPosition([data.location.lat, data.location.lng]);
 			});

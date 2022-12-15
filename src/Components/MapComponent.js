@@ -2,7 +2,6 @@ import { MapContainer, TileLayer, useMap, Marker } from "react-leaflet";
 import * as L from "leaflet";
 
 export default function MapComponent({ position }) {
-	// const position = [42.2546647, 42.6829771];
 	const svgIcon = L.divIcon({
 		html: `
     <svg xmlns="http://www.w3.org/2000/svg" 

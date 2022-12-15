@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.App {
+	.top-part {
+		position: relative;
+		#search-section {
+			background-image: url("pattern-bg.png");
+			height: 40vh;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding-top: 2rem;
+			h2 {
+				text-align: center;
+				color: white;
+				margin-bottom: 2rem;
+				font-size: clamp(1.4rem, 2.5vw, 3rem);
+			}
+			.search-form {
+				display: grid;
+				grid-template-columns: 5fr 4rem;
+				max-width: 50rem;
+				margin: auto;
+				width: 90%;
+				align-items: center;
+				button {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 4rem;
+					height: 4rem;
+					background-color: black;
+					border-radius: 1rem;
+
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					cursor: pointer;
+				}
+				input {
+					height: 4rem;
+					border-radius: 1rem;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					border: none;
+					padding: 1rem;
+					outline: none;
+					font-size: 1.3rem;
+					&::placeholder {
+						font-size: 1.3rem;
+					}
+				}
+			}
+			@media (max-width: 1024px) {
+				padding-top: 1rem;
+			}
+		}
+		#result-section {
+			position: absolute;
+			top: 90%;
+			left: 5vw;
+			z-index: 100;
+			width: 90vw;
+			margin: auto;
+			border-radius: 1rem;
+			background-color: white;
+			padding: 2rem;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			div {
+				padding: 1rem;
+				&:not(:last-child) {
+					border-right: 1px solid rgba($color: #000000, $alpha: 0.3);
+				}
+				h2 {
+					color: rgba($color: #000000, $alpha: 1);
+					font-size: clamp(1.2rem, 2vw, 1.5rem);
+				}
+				h4 {
+					text-transform: uppercase;
+					letter-spacing: 3px;
+					font-size: 1.1rem;
+					font-weight: 900;
+					color: rgba($color: #000000, $alpha: 0.7);
+					margin-bottom: 0.6rem;
+				}
+			}
+			@media (max-width: 1024px) {
+				grid-template-columns: 1fr;
+				padding: 1.5rem;
+
+				top: 70%;
+				div {
+					padding: 0.5rem;
+					text-align: center;
+					&:not(:last-child) {
+						border-right: none;
+					}
+					h4 {
+						margin-bottom: 0;
+					}
+				}
+			}
+			@media (max-width: 768px) {
+				top: 60%;
+			}
+		}
+	}
+
+	.leaflet-container {
+		height: 60vh;
+		z-index: 2;
+	}
+}

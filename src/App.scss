@@ -25,8 +25,10 @@
 				font-size: clamp(1.4rem, 2.5vw, 3rem);
 			}
 			.search-form {
-				display: grid;
-				grid-template-columns: 5fr 4rem;
+				// display: grid;
+				// grid-template-columns: 5fr 4rem;
+				display: flex;
+				align-items: center;
 				max-width: 50rem;
 				margin: auto;
 				width: 90%;
@@ -42,6 +44,7 @@
 
 					border-top-left-radius: 0;
 					border-bottom-left-radius: 0;
+					border: none;
 					cursor: pointer;
 				}
 				input {
@@ -52,6 +55,7 @@
 					border: none;
 					padding: 1rem;
 					outline: none;
+					width: calc(100% - 4rem);
 					font-size: 1.3rem;
 					&::placeholder {
 						font-size: 1.3rem;
@@ -65,7 +69,8 @@
 		#result-section {
 			position: absolute;
 			top: 90%;
-			left: 5vw;
+			left: 50%;
+			transform: translateX(-50%);
 			z-index: 100;
 			width: 90vw;
 			margin: auto;

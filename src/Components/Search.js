@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 export default function Search({ setData, setPosition }) {
 	const [search, setSearch] = useState("");
-
 	function getResults(url) {
 		fetch(
 			`https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_API_KEY}&${url}`
